@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Setup</title>
+		<% for(var i=0; i<htmlWebpackPlugin.options.vendorCss.length; i++) {%>
+		   <link href="<%= htmlWebpackPlugin.options.vendorCss[i] %>" rel="stylesheet">
+		<% } %>
+	</head>
+	<body>
+		<div id="app"></div>
+		<% for(var i=0; i<htmlWebpackPlugin.options.vendorJs.length; i++) {%>
+		   <script href="<%= htmlWebpackPlugin.options.vendorJs[i] %>"></script>
+		<% } %>
+	</body>
+</html>
